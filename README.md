@@ -33,6 +33,7 @@ pipeline {
 ```groovy
 stage('build') {
     node {
+        // 需要通过checkout scm获得github的变更
         checkout scm
         try{
             sh 'pm2 delete tj'
