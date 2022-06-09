@@ -33,6 +33,7 @@ pipeline {
 ```groovy
 stage('build') {
     node {
+        checkout scm
         try{
             sh 'pm2 delete tj'
         }catch(exc){
