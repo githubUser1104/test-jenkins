@@ -7,4 +7,7 @@ const server = http.createServer((req, res) => {
     res.end(path + ' say: Hello world!!')
 })
 server.listen(3090)
-console.log(' server listening on 3090 port')
+server.on('listening', function() {
+    let port = server.address().port
+    console.log('服务器开始监听端口：' + port)
+});

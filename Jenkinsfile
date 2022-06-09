@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pwd'
+                sh 'pm2 start index.js --name tj'
             }
         }
     }
