@@ -28,4 +28,4 @@ pipeline {
 }
 ```
 
-- groovy写法
+- groovy写法，更符合编程习惯

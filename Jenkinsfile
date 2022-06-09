@@ -1,6 +1,12 @@
 stage('build') {
     node {
-        sh 'pwd'
-        echo '成功build'
+        try{
+            sh 'pm2 delete tj'
+        }catch(exc){
+            echo '自定义提示：tj不存在与pm2 list中'
+        }finally{
+            sh 'pm2 start index.js --name tj'
+            echo '自定义提示：成功build！'
+        }
     }
 }
