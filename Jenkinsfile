@@ -12,6 +12,7 @@ stage('test') {
 }
 stage('deploy') {
     node {
+        sh 'nvm use 14'
         // 环境变量与if...else
         if (env.BRANCH_NAME == 'master'){
             echo '自定义提示：当前分支为master'
