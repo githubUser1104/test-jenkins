@@ -1,3 +1,4 @@
+// 多分支流水线才需要用，freestyle推荐自行编写sh脚本
 stage('build') {
     node {
         // 需要通过checkout scm获得github的变更
