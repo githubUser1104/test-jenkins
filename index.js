@@ -4,7 +4,7 @@ const server = http.createServer((req, res) => {
     // debugger // 断点
     const url = req.url // '/index.html?a=100'
     const path = url.split('?')[0] // '/index.html'
-    res.end(path + ' say: Hello world & jenkins!!')
+    res.end(path + ' say: Hello world & jenkins!!!')
 })
 server.listen(3090)
 server.on('listening', function() {
